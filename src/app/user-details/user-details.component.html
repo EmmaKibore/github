@@ -2,19 +2,18 @@
   <div class="jumbotron">
     <h1>WELCOME TO GITHUB</h1>
     </div>
-<div *ngIf="user">
 
   <h2> <a href=""> Homepage</a></h2>
   <h2> <a href=""> Repositories</a></h2>
   <div class="input-form">
     <div class="col-md-6">
-
-    <!-- <form ([ngSubmit])="findUser()" class="search-form"> -->
-      <form action="" class="form-search">
-  <input type="text" class="form-control"placeholder="Enter Username" [(ngModel)]="userName">
+ 
+      <form ([ngSubmit])="getUser()" class="form-search">
+  <input type="text" class="form-control" placeholder="Enter Username" [(ngModel)]="userName" name="userName" (keyup)="findUser()">
 
   <button class="btn btn-success ok" type="submit">SEARCH</button>
-
+      </form>
+      <p>{{user.login}}</p>
   <div *ngIf="repolist">
     <ul class="list-group list-group-flush" *ngFor="let repo of repolist">
       <li class="list-group-item">
@@ -34,13 +33,15 @@
   <div class="information" style="float:left">
     <h3>{{githubData.name}}</h3>
 
-    <h5>Location: {{githubData.location}}</h5>
-    <h5>Repositories: {{githubData.public_repos}}</h5>
-    <h5>Followers: {{githubData.followers}}</h5>
-    <h5>Following: {{githubData.following}}</h5>
-    <h5><a [href]="githubData.html_url">View the page here:</a></h5>
+    <h4>Location: {{githubData.location}}</h4>
+    <h4>Repositories: {{githubData.public_repos}}</h4>
+    <h4>Followers: {{githubData.followers}}</h4>
+    <h4>Following: {{githubData.following}}</h4>
+    <h4><a [href]="githubData.html_url">View the page here:</a></h4>
 
     </div>
     </div>
+  </div>
+</div>
 <!-- <button (click)="displayname()">display</button>
     <p>name{{user}}</p> -->

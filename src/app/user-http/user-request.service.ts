@@ -6,7 +6,7 @@ import { User } from '../user-class/user';
 interface ApiResponse{
 	name;
   }
-  
+
  @Injectable()
  export class UserRequestService {
  	userName:string="Emma Kibore";	
@@ -16,10 +16,10 @@ interface ApiResponse{
  	}
 
  	getUserDetails() {		
- 		return this._http.get<ApiResponse>( environment.apiurl+environment.users + this.userName +environment.accesstoken);
+ 		return this._http.get<ApiResponse>( environment.apiurl+ this.userName +environment.accesstoken);
 	 }
 	 getUser(){
-		return this._http.get<ApiResponse>(environment.apiurl+environment.users+this.userName+environment.accesstoken)
+		return this._http.get<ApiResponse>(environment.apiurl+this.userName+environment.accesstoken)
 	   }
 	  
 	   getRepo(){
