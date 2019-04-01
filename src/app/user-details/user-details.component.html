@@ -1,0 +1,40 @@
+<!--<div class="container">
+  <div class="jumbotron">
+    <h1>WELCOME TO GITHUB</h1>
+    </div>
+<div *ngIf="userInfo">
+
+  <h2 class="repositories">Repositories</h2>
+  <div class="input-form">
+  <input placeholder="Enter Username" [(ngModel)]="userName">
+  <button (click)="userRequest()">SEARCH</button>
+  <div *ngIf="repolist">
+    <ul class="list-group list-group-flush" *ngFor="let repo of repolist">
+      <li class="list-group-item">
+
+        <p>{{repo.description}}</p>
+<p *ngIf="repo.pushed_at"><small> Updated on {{ repo.pushed_at }} </small></p>
+<p *ngIf="repo.pushed_at"><small> Created on {{ repo.created_at }}</small></p>
+</li>
+</ul>
+</div>
+
+<div *ngIf="repolist?.length == 0">
+  <p class="text-danger">Doesn't have any public repositories yet</p>
+  </div>
+</div>
+
+<div class="well" id="display">
+  <div class="information" style="float:left">
+    <h3>{{githubData.name}}</h3>
+
+    <h5>Location: {{githubData.location}}</h5>
+    <h5>Repositories: {{githubData.public_repos}}</h5>
+    <h5>Followers: {{githubData.followers}}</h5>
+    <h5>Following: {{githubData.following}}</h5>
+    <h5><a [href]="githubData.html_url">View the page here:</a></h5>
+
+    </div>
+    </div>-->
+<button (click)="displayname()">display</button>
+    <p>name{{user}}</p>
