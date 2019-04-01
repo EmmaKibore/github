@@ -1,16 +1,16 @@
-# Github
+## Github
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.It's an online website that allows one to search for users and their public repositories.
 
 
 ## BDD
-| Behaviour- our programme should display  | Input Example-when it receives|output Example-should return| 
-| :--------------------------| :--------------------------   |:-------------------------- |
-| Enter quote                | Life is short                 | Display quote              |
-|Delete quote                | delete action                 | Deleted quote              |
-| up vote a quote            | up votes action               | up vote  +1                |
-| down vote a quote          | down votes action             | down vote +1               |
-|--------------------------  |------------------------------ |----------------------------|                     
+| Behaviour- our programme should handle| Input Example-when it receives|output Example-should return| 
+| :-------------------------| :---------------------------|:-------------------------- |
+| Search for user           | Input:"EmmaKibore           | Display user:"EmmaKibore   |
+| Search for user repository| Input:"EmmaKibore/portfolio"| Display user repository    |
+|                           |                             | "EmmaKibore/portfolio"     |
+|                           |                             |                            |
+|---------------------------|-----------------------------|----------------------------|                     
 ## Setup/Installation Requirements
 Open your browser browser.
 Load gitHub on your browser.
