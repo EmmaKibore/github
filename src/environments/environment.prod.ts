@@ -1,6 +1,10 @@
+
 export const environment = {
-  production: true,
+  production: false,
   apiurl:"https://api.github.com/",
   users:"users/",
-  accesstoken:"?access_token=b95b83fcc21d96950a9c28dc20618e4694718272"
-};
+  repositories:"repositories",
+  accesstoken:"?access_token=b5ac045230c461971af93fa5d3a2129d75961c94",
+  };
+  
+  

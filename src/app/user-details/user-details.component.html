@@ -1,13 +1,19 @@
-<!--<div class="container">
+<div class="container">
   <div class="jumbotron">
     <h1>WELCOME TO GITHUB</h1>
     </div>
 <div *ngIf="userInfo">
 
-  <h2 class="repositories">Repositories</h2>
+  <h2> <a href=""> Homepage</a></h2>
+  <h2> <a href=""> Repositories</a></h2>
   <div class="input-form">
-  <input placeholder="Enter Username" [(ngModel)]="userName">
-  <button (click)="userRequest()">SEARCH</button>
+    <div class="col-md-6">
+
+    <form ([ngSubmit])="findUser()" class="search-form">
+  <input type="text" class="form-control"placeholder="Enter Username" [(ngModel)]="userName">
+
+  <button class="btn btn-success ok" type="submit">SEARCH</button>
+
   <div *ngIf="repolist">
     <ul class="list-group list-group-flush" *ngFor="let repo of repolist">
       <li class="list-group-item">
@@ -21,7 +27,6 @@
 
 <div *ngIf="repolist?.length == 0">
   <p class="text-danger">Doesn't have any public repositories yet</p>
-  </div>
 </div>
 
 <div class="well" id="display">
@@ -35,6 +40,6 @@
     <h5><a [href]="githubData.html_url">View the page here:</a></h5>
 
     </div>
-    </div>-->
-<button (click)="displayname()">display</button>
-    <p>name{{user}}</p>
+    </div>
+<!-- <button (click)="displayname()">display</button>
+    <p>name{{user}}</p> -->
