@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## BDD
 | Behaviour- our programme should handle| Input Example-when it receives|output Example-should return| 
 | :-------------------------| :---------------------------|:-------------------------- |
-| Search for user           | Input:"EmmaKibore           | Display user:"EmmaKibore   |
+| Search for user           | Input:"EmmaKibore"          | Display user:"EmmaKibore"  |
 | Search for user repository| Input:"EmmaKibore/portfolio"| Display user repository    |
 |                           |                             | "EmmaKibore/portfolio"     |
 |                           |                             |                            |
