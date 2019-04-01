@@ -2,14 +2,15 @@
   <div class="jumbotron">
     <h1>WELCOME TO GITHUB</h1>
     </div>
-<div *ngIf="userInfo">
+<div *ngIf="user">
 
   <h2> <a href=""> Homepage</a></h2>
   <h2> <a href=""> Repositories</a></h2>
   <div class="input-form">
     <div class="col-md-6">
 
-    <form ([ngSubmit])="findUser()" class="search-form">
+    <!-- <form ([ngSubmit])="findUser()" class="search-form"> -->
+      <form action="" class="form-search">
   <input type="text" class="form-control"placeholder="Enter Username" [(ngModel)]="userName">
 
   <button class="btn btn-success ok" type="submit">SEARCH</button>
