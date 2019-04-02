@@ -8,9 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 | :-------------------------| :---------------------------|:-------------------------- |
 | Search for user           | Input:"EmmaKibore"          | Display user:"EmmaKibore"  |
 | Search for user repository| Input:"EmmaKibore/portfolio"| Display user repository    |
-|                           |                             | "EmmaKibore/portfolio"     |
-|                           |                             |                            |
-|---------------------------|-----------------------------|----------------------------|                     
+|                           |                             |       "EmmaKibore/portfolio"      |
+|                           |                             |                                                 
 ## Setup/Installation Requirements
 Open your browser browser.
 Load gitHub on your browser.
