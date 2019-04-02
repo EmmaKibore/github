@@ -1,44 +1,17 @@
-
-/* h1{
-    text-align: center;
-    font:bold;
+.container-fluid{
+    background-image: url("https://www.wallpapersin4k.org/wp-content/uploads/2017/04/Angles-Pictures-Wallpaper-16.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:5%;
+    padding-bottom:12%;
 }
-
-h2{
-    color: #ffc107;
-}
-
-input{
-    width: 100%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    font-family: 'Libre Baskerville', serif;
-
-
-h4{
-    padding: 2%;
-}
-
-.output{
-    padding: 5%;
-    width: 100%;
-    float: right;
-    box-shadow: 5px 5px 5px grey;
-    font-family: 'Merienda', cursive;
-}
-
-    .row{
-        display: flex;
-        justify-content: right;
-    }
-} */
 nav ul {
     padding-left: 50px;
     display: inline-block;
     vertical-align: top;
   }
   
-  nav li {
+  /* nav li {
     display: inline-block;
     font-size: 20px;
     font-family: 'ZCOOL XiaoWei', serif;
@@ -55,7 +28,7 @@ nav ul {
   }
   
   nav>ul>li>a:hover {
-    background: black;
+    background: green;
     border-radius: 5px;
     text-decoration:underline;
   }
@@ -67,4 +40,7 @@ nav ul {
       float:right;
       margin: 3%;
   }
-  
+  #title{
+      text-align: center;
+      margin: 1%;
+  } */
