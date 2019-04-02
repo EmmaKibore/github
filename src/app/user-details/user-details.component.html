@@ -9,11 +9,11 @@
     <div class="col-md-6">
  
       <form ([ngSubmit])="getUser()" class="form-search">
-  <input type="text" class="form-control" placeholder="Enter Username" [(ngModel)]="userName" name="userName" (keyup)="findUser()">
+  <input type="text" class="form-control" placeholder="Enter Username" [(ngModel)]="name" name="userName" (keyup.enter)="getUser()" >
 
-  <button class="btn btn-success ok" type="submit">SEARCH</button>
+  <button class="btn btn-success ok" type="search">SEARCH</button>
       </form>
-      <p>{{user.login}}</p>
+      <p>{{name.userName}}</p>
   <div *ngIf="repolist">
     <ul class="list-group list-group-flush" *ngFor="let repo of repolist">
       <li class="list-group-item">

@@ -5,6 +5,7 @@ import { User } from '../user-class/user';
 
 interface ApiResponse{
 	name;
+	// userName;
   }
 
  @Injectable()
@@ -19,6 +20,7 @@ interface ApiResponse{
  		return this._http.get<ApiResponse>( environment.apiurl+ this.userName +environment.accesstoken);
 	 }
 	 getUser(){
+		 
 		return this._http.get<ApiResponse>(environment.apiurl+this.userName+environment.accesstoken)
 	   }
 	  

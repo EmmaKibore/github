@@ -33,7 +33,7 @@ export class UserDetailsComponent implements OnInit {
   getUser(){
     return this.userRequestedService.getUser().subscribe(data=>{
       this.user=data.name
-      console.log(data)
+      console.log(data.name)
     })
   }
 
