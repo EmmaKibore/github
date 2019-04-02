@@ -63,6 +63,8 @@ nav ul {
       display:flex;
       flex-direction:row;
   }
-  /* .list-group-item{
-      float:left;
-  } */
+  .repos{
+      float:right;
+      margin: 3%;
+  }
+  

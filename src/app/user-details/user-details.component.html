@@ -9,48 +9,57 @@
     
   
 
-  <div class="input-form">
-    <div class="col-md-6">
+  
       <div>
         <h1>WELCOME TO GITHUB</h1>
-  <input type="text" class="form-control" placeholder="Enter Username" [(ngModel)]="userName" name="userName"  (keyup.enter)=getUser() >
-
-  <button (click)=getRepo() (click)=getUser() class="btn btn-success ok" type="search">SEARCH</button>
-      <p>Username <strong>{{user.login}}</strong> </p>
+      </div>
+  <div class="row">
+    <div class="col-md-5">
+        <div class="input-form">
+            <input type="text" class="form-control" placeholder="Enter Username" [(ngModel)]="userName" name="userName"  (keyup.enter)=getUser() >
+          
+            <button (click)=getRepo() (click)=getUser() class="btn btn-success ok" type="search">SEARCH</button>
+                <p>Username <strong>{{user.login}}</strong> </p>
+              
+            <div *ngIf="repolist">
+              <ul class="list-group list-group-flush" *ngFor="let repo of repolist">
+                <li class="list-group-item">
+          
+                  <p>{{repo.description}}</p>
+          <p *ngIf="repo.pushed_at"><small> Updated on {{ user.pushed_at }} </small></p>
+          <p *ngIf="repo.pushed_at"><small> Created on {{ user.created_at }}</small></p>
+          </li>
+          </ul>
+          </div>
+          
+          <div *ngIf="repolist?.length == 0">
+            <p class="text-danger">Doesn't have any public repositories yet</p>
+          </div>
+          
+          <div class="well" id="display">
+            <div class="information" style="float:left">
+              <h3>{{user.name}}</h3>
+          
+              <h4>Location: {{user.location}}</h4>
+              <h4>Repositories: {{user.public_repos}}</h4>
+              <h4>Followers: {{user.followers}}</h4>
+              <h4>Following: {{user.following}}</h4>
+              <h4><a [href]="user.html_url">View the page here:</a></h4>
+          
+              </div>
+              </div>
+          </div>
     </div>
-  <div *ngIf="repolist">
-    <ul class="list-group list-group-flush" *ngFor="let repo of repolist">
-      <li class="list-group-item">
 
-        <p>{{repo.description}}</p>
-<p *ngIf="repo.pushed_at"><small> Updated on {{ user.pushed_at }} </small></p>
-<p *ngIf="repo.pushed_at"><small> Created on {{ user.created_at }}</small></p>
-</li>
-</ul>
-</div>
-
-<div *ngIf="repolist?.length == 0">
-  <p class="text-danger">Doesn't have any public repositories yet</p>
-</div>
-
-<div class="well" id="display">
-  <div class="information" style="float:left">
-    <h3>{{user.name}}</h3>
-
-    <h4>Location: {{user.location}}</h4>
-    <h4>Repositories: {{user.public_repos}}</h4>
-    <h4>Followers: {{user.followers}}</h4>
-    <h4>Following: {{user.following}}</h4>
-    <h4><a [href]="user.html_url">View the page here:</a></h4>
-
-    </div>
+    <div class="col-md-7 card">
+        <div *ngFor="let repo of repos" class="repos">
+            <a href="{{repo.html_url}}"><h5> repo name  {{repo.name}}</h5></a>
+            language used {{repo.language}}
+          
+          </div>
     </div>
   </div>
-</div>
-<div *ngFor="let repo of repos" class="repos">
-  <a href="{{repo.html_url}}"><h5> repo name  {{repo.name}}</h5></a>
-  language used {{repo.language}}
+  
 
-</div>
 <!-- <button (click)="displayname()">display</button>
     <p>name{{user}}</p> -->
