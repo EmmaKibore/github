@@ -6,6 +6,7 @@ import { UserRequestService } from '../user-http/user-request.service';
 import { User } from '../user-class/user';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { Repository } from '../repository-class/repository';
 
 
 @Component({
@@ -19,21 +20,25 @@ export class UserDetailsComponent implements OnInit {
   userRequestService: UserRequestService;
 
   user:any=[];
+  repos:any=[]
 
-  //seachedUser: string="";
+  userName: string="emmakibore";
 
-  constructor(public userRequestedService: UserRequestService,) { }
+  constructor(private http:HttpClient,private userRequestedService: UserRequestService,) { }
 
   ngOnInit() {
 
-    // this.userRequestService.userRequest();
-    // this.user = this.userRequestService.user;
-
   }
   getUser(){
-    return this.userRequestedService.getUser().subscribe(data=>{
-      this.user=data.name
-      console.log(data.name)
+    return this.userRequestedService.getUser(this.userName).subscribe(data=>{
+      this.user=data
+      console.log(data)
+    })
+  }
+  getRepo(){
+    return this.userRequestedService.getRepo(this.userName).subscribe((res)=>{
+      this.repos=res;
+      console.log(res)
     })
   }
 

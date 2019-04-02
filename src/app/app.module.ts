@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 //import { User } from './user-class/user';
+import { UserRequestService} from "./user-http/user-request.service"
 
 import { AppComponent } from './app.component';
 import { GithubComponent } from './github/github.component';
@@ -25,7 +26,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [HttpClientModule],
+  providers: [UserRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

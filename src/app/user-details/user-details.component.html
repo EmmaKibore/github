@@ -1,26 +1,30 @@
 <div class="container">
-  <div class="jumbotron">
-    <h1>WELCOME TO GITHUB</h1>
-    </div>
+    <nav>
+        <ul>
+         <li> <a href=""> Home</a></li>
+         <li> <a href=""> Repos</a></li>
+        </ul>
+      </nav>
+      <!-- <div id="frog"> -->
+    
+  
 
-  <h2> <a href=""> Homepage</a></h2>
-  <h2> <a href=""> Repositories</a></h2>
   <div class="input-form">
     <div class="col-md-6">
- 
-      <form ([ngSubmit])="getUser()" class="form-search">
-  <input type="text" class="form-control" placeholder="Enter Username" [(ngModel)]="name" name="userName" (keyup.enter)="getUser()" >
+      <div>
+        <h1>WELCOME TO GITHUB</h1>
+  <input type="text" class="form-control" placeholder="Enter Username" [(ngModel)]="userName" name="userName"  (keyup.enter)=getUser() >
 
-  <button class="btn btn-success ok" type="search">SEARCH</button>
-      </form>
-      <p>{{name.userName}}</p>
+  <button (click)=getRepo() (click)=getUser() class="btn btn-success ok" type="search">SEARCH</button>
+      <p>Username <strong>{{user.login}}</strong> </p>
+    </div>
   <div *ngIf="repolist">
     <ul class="list-group list-group-flush" *ngFor="let repo of repolist">
       <li class="list-group-item">
 
         <p>{{repo.description}}</p>
-<p *ngIf="repo.pushed_at"><small> Updated on {{ repo.pushed_at }} </small></p>
-<p *ngIf="repo.pushed_at"><small> Created on {{ repo.created_at }}</small></p>
+<p *ngIf="repo.pushed_at"><small> Updated on {{ user.pushed_at }} </small></p>
+<p *ngIf="repo.pushed_at"><small> Created on {{ user.created_at }}</small></p>
 </li>
 </ul>
 </div>
@@ -31,17 +35,22 @@
 
 <div class="well" id="display">
   <div class="information" style="float:left">
-    <h3>{{githubData.name}}</h3>
+    <h3>{{user.name}}</h3>
 
-    <h4>Location: {{githubData.location}}</h4>
-    <h4>Repositories: {{githubData.public_repos}}</h4>
-    <h4>Followers: {{githubData.followers}}</h4>
-    <h4>Following: {{githubData.following}}</h4>
-    <h4><a [href]="githubData.html_url">View the page here:</a></h4>
+    <h4>Location: {{user.location}}</h4>
+    <h4>Repositories: {{user.public_repos}}</h4>
+    <h4>Followers: {{user.followers}}</h4>
+    <h4>Following: {{user.following}}</h4>
+    <h4><a [href]="user.html_url">View the page here:</a></h4>
 
     </div>
     </div>
   </div>
+</div>
+<div *ngFor="let repo of repos" class="repos">
+  <a href="{{repo.html_url}}"><h5> repo name  {{repo.name}}</h5></a>
+  language used {{repo.language}}
+
 </div>
 <!-- <button (click)="displayname()">display</button>
     <p>name{{user}}</p> -->
