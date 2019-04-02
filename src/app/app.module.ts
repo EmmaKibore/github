@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserRequestService} from "./user-http/user-request.service"
 
 import { AppComponent } from './app.component';
-import { GithubComponent } from './github/github.component';
+// import { GithubComponent } from './github/github.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 
@@ -17,7 +17,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
     AppComponent,
     UserDetailsComponent,
     RepositoriesComponent,
-    GithubComponent
+    // GithubComponent
     
   ],
   imports: [
